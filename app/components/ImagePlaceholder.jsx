@@ -1,8 +1,16 @@
-export default function ImagePlaceholder({ className = "", children }) {
+import { HomeAltSlim } from "iconoir-react";
+
+export default function ImagePlaceholder({ className = "", title = "Espaço para foto ou render", subtitle = "" }) {
   return (
     <div className={`image-placeholder ${className}`.trim()}>
-      <span className="icon icon-home-large" aria-hidden="true" />
-      <span>{children}</span>
+      <div className="placeholder-inner">
+        <span className="placeholder-mark" aria-hidden="true">
+          <HomeAltSlim className="placeholder-icon" />
+        </span>
+        <span className="placeholder-eyebrow">Sua Casa na Planta</span>
+        <strong>{title}</strong>
+        {subtitle ? <span>{subtitle}</span> : null}
+      </div>
     </div>
   );
 }
