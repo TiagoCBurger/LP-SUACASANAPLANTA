@@ -926,18 +926,18 @@ fieldset {
     box-shadow var(--duration-medium) ease;
 }
 
-.video-card video {
+.video-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 4 / 5;
   max-height: 520px;
   border-radius: 14px;
-  background: var(--accent-dark);
-  object-fit: cover;
+  background: #f5f1e8;
+  object-fit: contain;
   transition: transform var(--duration-medium) var(--ease-lift), filter var(--duration-medium) ease;
 }
 
-.video-card:hover video {
+.video-card:hover img {
   transform: scale(1.015);
   filter: saturate(1.05);
 }
@@ -1182,7 +1182,7 @@ fieldset {
   .icon-list li:hover,
   .product-visual:hover img,
   .final-visual:hover img,
-  .video-card:hover video {
+  .video-card:hover img {
     transform: none;
   }
 }
