@@ -14,33 +14,6 @@ export const metadata = {
   title: "LP | Sua Casa na Planta",
 };
 
-const creativeAssets = [
-  {
-    src: "/criativos/ct01-feed-1080.png",
-    alt: "Criativo estático de feed com oferta da Sua Casa na Planta",
-  },
-  {
-    src: "/criativos/ct01-feed.png",
-    alt: "Criativo estático quadrado com chamada comercial da Sua Casa na Planta",
-  },
-  {
-    src: "/criativos/ct01-stories-v1.png",
-    alt: "Criativo estático vertical para stories da Sua Casa na Planta",
-  },
-  {
-    src: "/criativos/ct01-stories-v2.png",
-    alt: "Segunda variação de criativo estático para stories da Sua Casa na Planta",
-  },
-  {
-    src: "/criativos/ct02-feed.png",
-    alt: "Criativo estático de feed destacando condições de entrada",
-  },
-  {
-    src: "/criativos/instagram-post-6.png",
-    alt: "Criativo estático para Instagram da Sua Casa na Planta",
-  },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -251,21 +224,38 @@ export default function HomePage() {
 
           <section className="section">
             <header className="section-header">
-              <h2>Veja alguns criativos estáticos da campanha</h2>
+              <h2>Veja quem já realizou esse sonho</h2>
               <p>
-                Artes usadas para apresentar a proposta da Sua Casa na Planta de forma direta, visual e pronta para mídia.
+                Entregas reais, famílias reais e obras acompanhadas pela equipe da Sua Casa na Planta em Passo Fundo e
+                região.
               </p>
             </header>
             <div className="video-grid">
-              {creativeAssets.map((creative) => (
-                <article className="video-card" key={creative.src}>
-                  <img src={creative.src} alt={creative.alt} width={1080} height={1350} />
+              {[
+                {
+                  src: "/video1.MP4",
+                  type: "video/mp4",
+                },
+                {
+                  src: "/copy_42C0521F-9731-40E4-A04C-643BA0FADEF7.mov",
+                  type: "video/quicktime",
+                },
+                {
+                  src: "/ee04ab4c-ab2b-4669-8d26-6c38e4f9bfc4.mp4",
+                  type: "video/mp4",
+                },
+              ].map((video) => (
+                <article className="video-card" key={video.src}>
+                  <video controls preload="metadata" playsInline>
+                    <source src={video.src} type={video.type} />
+                    Seu navegador não suporta a reprodução deste vídeo.
+                  </video>
                 </article>
               ))}
             </div>
             <p className="support-note centered">
-              Os criativos em vídeo foram substituídos por peças estáticas para facilitar visualização, aprovação e uso em
-              campanhas.
+              Assista aos vídeos e veja como outras famílias saíram da dúvida para a realização da casa própria com
+              acompanhamento em cada etapa.
             </p>
             <div className="center-action">
               <a className="button primary compact" href="#formulario">
