@@ -672,6 +672,22 @@ fieldset {
   text-align: center;
 }
 
+.form-feedback {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.form-feedback.error {
+  color: #b42318;
+}
+
+.hero-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
 .two-card-grid,
 .three-card-grid {
   display: grid;

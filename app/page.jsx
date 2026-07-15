@@ -5,11 +5,11 @@ import {
   CreditCard,
   HomeAltSlim,
   Map,
-  SafeArrowRight,
   Truck,
   WarningTriangle,
 } from "iconoir-react";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import LeadForm from "./components/LeadForm";
 export const metadata = {
   title: "LP | Sua Casa na Planta",
 };
@@ -17,7 +17,7 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <FloatingWhatsApp href="#formulario" />
+      <FloatingWhatsApp />
 
       <main className="wireframe-shell">
         <section className="page-board main-lp" aria-labelledby="lp-title">
@@ -62,57 +62,7 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <form className="lead-form hero-lead-form" id="formulario" aria-labelledby="form-title">
-                  <h2 id="form-title">Solicite sua simulação gratuita</h2>
-                  <p>
-                    Preencha seus dados para receber uma orientação sobre financiamento, entrada e possibilidades para
-                    construir sua casa.
-                  </p>
-                  <label>
-                    <span>Nome</span>
-                    <input type="text" name="nome" placeholder="Seu nome" />
-                  </label>
-                  <label>
-                    <span>E-mail</span>
-                    <input type="email" name="email" placeholder="voce@email.com" />
-                  </label>
-                  <label>
-                    <span>Telefone/WhatsApp</span>
-                    <input type="tel" name="telefone" placeholder="(54) 99999-9999" />
-                  </label>
-                  <label>
-                    <span>Renda familiar</span>
-                    <select name="renda_familiar" defaultValue="" required>
-                      <option value="" disabled>
-                        Selecione a faixa de renda
-                      </option>
-                      <option value="ate-3000">Até R$ 3.000</option>
-                      <option value="3001-5000">De R$ 3.001 a R$ 5.000</option>
-                      <option value="5001-8000">De R$ 5.001 a R$ 8.000</option>
-                      <option value="8001-12000">De R$ 8.001 a R$ 12.000</option>
-                      <option value="12001-20000">De R$ 12.001 a R$ 20.000</option>
-                      <option value="acima-20000">Acima de R$ 20.000</option>
-                    </select>
-                  </label>
-                  <fieldset>
-                    <legend>Você já possui terreno?</legend>
-                    <label className="radio-row">
-                      <input type="radio" name="terreno" />
-                      <span>Sim, já tenho meu terreno e quero apenas construir</span>
-                    </label>
-                    <label className="radio-row">
-                      <input type="radio" name="terreno" />
-                      <span>Não, quero a solução completa: terreno + construção</span>
-                    </label>
-                  </fieldset>
-                  <button className="button hero-submit full" type="button">
-                    Quero minha simulação gratuita
-                  </button>
-                  <p className="microcopy">
-                    <SafeArrowRight className="icon icon-lock" aria-hidden="true" />
-                    Seu cadastro será enviado para nossa equipe de atendimento.
-                  </p>
-                </form>
+                <LeadForm />
               </div>
 
               <p className="legal-note">

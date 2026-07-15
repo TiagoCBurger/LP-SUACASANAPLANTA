@@ -1,5 +1,6 @@
 import { CheckCircle, Headset, HomeAltSlim, Map, Whatsapp } from "iconoir-react";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
+import { WHATSAPP_LINKS } from "../lib/whatsapp";
 
 export const metadata = {
   title: "Obrigado | Sua Casa na Planta",
@@ -38,7 +39,12 @@ export default function ThankYouPage() {
                   Ideal para quem ainda não tem terreno e quer ajuda para encontrar uma alternativa viável, financiar e
                   construir com mais segurança.
                 </p>
-                <a className="button whatsapp" href="#">
+                <a
+                  className="button whatsapp"
+                  href={WHATSAPP_LINKS.terrenoConstrucao}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Falar sobre terreno + construção
                   <Whatsapp className="whatsapp-icon" aria-hidden="true" />
                 </a>
@@ -54,7 +60,12 @@ export default function ThankYouPage() {
                   Ideal para quem já possui o lote e quer uma equipe para conduzir projeto, obra e entrega da casa pronta,
                   sem precisar lidar sozinho com pedreiros, materiais e burocracias.
                 </p>
-                <a className="button whatsapp" href="#">
+                <a
+                  className="button whatsapp"
+                  href={WHATSAPP_LINKS.apenasConstrucao}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Falar sobre construção no meu terreno
                   <Whatsapp className="whatsapp-icon" aria-hidden="true" />
                 </a>
@@ -68,7 +79,12 @@ export default function ThankYouPage() {
             </span>
             <h2>Prefere adiantar o atendimento?</h2>
             <p>Chame nossa equipe direto no WhatsApp e envie a mensagem: “Quero minha simulação gratuita”.</p>
-            <a className="button whatsapp final-whatsapp" href="#">
+            <a
+              className="button whatsapp final-whatsapp"
+              href={WHATSAPP_LINKS.simulacao}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Whatsapp className="whatsapp-icon" aria-hidden="true" />
               Chamar no WhatsApp agora
             </a>
