@@ -1207,7 +1207,7 @@ fieldset {
 
   .hero-background-gradient {
     background:
-      linear-gradient(180deg, rgba(248, 242, 233, 0.96) 0%, rgba(248, 242, 233, 0.68) 14%, rgba(248, 242, 233, 0.18) 26%, rgba(248, 242, 233, 0) 38%);
+      linear-gradient(180deg, rgba(248, 242, 233, 0.98) 0%, rgba(248, 242, 233, 0.94) 34%, rgba(248, 242, 233, 0.82) 54%, rgba(248, 242, 233, 0.42) 70%, rgba(248, 242, 233, 0) 86%);
   }
 
   h1 {
