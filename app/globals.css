@@ -1236,7 +1236,7 @@ fieldset {
 
   .hero-copy h1 {
     max-width: 100%;
-    line-height: 1.08;
+    line-height: 1.02;
   }
 
   .hero-copy p {
@@ -1264,27 +1264,45 @@ fieldset {
   }
 
   .hero-copy .trust-grid {
-    gap: 8px;
+    gap: 0;
     margin: 14px 0 0;
+    padding: 4px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.84);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow: 0 14px 30px rgba(15, 62, 82, 0.08);
+    backdrop-filter: blur(10px);
   }
 
-  .trust-item {
-    grid-template-columns: 24px 1fr;
+  .hero-copy .trust-item {
+    grid-template-columns: 34px 1fr;
     min-height: 0;
-    gap: 8px;
+    gap: 10px;
     align-items: center;
-    padding: 8px 10px;
+    padding: 10px 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     text-align: left;
   }
 
-  .trust-item strong {
-    font-size: 12px;
+  .hero-copy .trust-item + .trust-item {
+    border-top: 1px solid rgba(15, 62, 82, 0.1);
   }
 
-  .trust-item .icon {
-    width: 22px;
-    height: 22px;
+  .hero-copy .trust-item strong {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .hero-copy .trust-item .icon {
+    width: 34px;
+    height: 34px;
     margin: 0;
+    padding: 7px;
+    border-radius: 10px;
+    background: rgba(23, 137, 165, 0.1);
   }
 
   .support-note {
